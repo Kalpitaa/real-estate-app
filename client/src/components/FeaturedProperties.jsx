@@ -1,37 +1,51 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import PropertyCard from './PropertyCard';
-import api from '../services/api';
+
+const properties = [
+  {
+    _id: 1,
+    title: "Luxury Sea View Apartment",
+    price: "₹2.5 Cr",
+    location: "ECR, Chennai",
+    bhk: "3 BHK",
+    area: "1850 sq ft",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80",
+    features: ["Sea View", "Pool", "Gym"]
+  },
+  {
+    _id: 2,
+    title: "Modern Family Villa",
+    price: "₹4.2 Cr",
+    location: "Anna Nagar, Chennai",
+    bhk: "4 BHK",
+    area: "3200 sq ft",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80",
+    features: ["Garden", "Parking", "Security"]
+  },
+  {
+    _id: 3,
+    title: "Tech Park Residency",
+    price: "₹1.8 Cr",
+    location: "OMR, Chennai",
+    bhk: "3 BHK",
+    area: "1650 sq ft",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+    features: ["Smart Home", "Club House", "WiFi"]
+  },
+  {
+    _id: 4,
+    title: "Budget Friendly Apartment",
+    price: "₹65 Lakhs",
+    location: "Tambaram, Chennai",
+    bhk: "2 BHK",
+    area: "1050 sq ft",
+    image: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&q=80",
+    features: ["Near Metro", "Park", "Market"]
+  }
+];
 
 const FeaturedProperties = () => {
-  const [properties, setProperties] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchProperties();
-  }, []);
-
-  const fetchProperties = async () => {
-    try {
-      const response = await api.get('/properties?featured=true');
-      setProperties(response.data);
-      setLoading(false);
-    } catch (error) {
-      console.error('Error fetching properties:', error);
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return (
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4 text-center">
-          <div className="animate-pulse">Loading properties...</div>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section id="featured" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
