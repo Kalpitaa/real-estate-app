@@ -11,11 +11,11 @@ const app = express();
 app.use(cors({
   origin: [
     process.env.FRONTEND_URL || 'http://localhost:5173',
-    'http://localhost:3000',
+    'http://localhost:3000','https://real-estate-app-phi-lilac.vercel.app',
     'null',
     null
   ],
-  credentials: true
+  origin: '*'
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
