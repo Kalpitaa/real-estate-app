@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Cloudinary Upload</title>
+</head>
+<body>
+  <h2>Test Cloudinary Upload</h2>
+  
+  <input type="file" id="imageInput" accept="image/*" />
+  <br/><br/>
+  <button onclick="uploadImage()">Upload Image</button>
+  
+  <br/><br/>
+  <div id="result"></div>
+  <img id="preview" src="" style="max-width:300px; display:none; margin-top:10px" />
+
+  <script>
+    async function uploadImage() {
+      const file = document.getElementById('imageInput').files[0];
+      if (!file) {
+        alert('Please select an image first!');
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('image', file);
+
+      document.getElementById('result').innerHTML = 'Uploading...';
+
+      try {
+        const response = await fetch('http://localhost:5000/api/upload/single', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+        
+        // ✅ Show full response
+        console.log('Full response:', JSON.stringify(data, null, 2));
+
+        document.getElementById('result').innerHTML = `
+          <pre>${JSON.stringify(data, null, 2)}</pre>
+        `;
+
+        if (data.url) {
+          document.getElementById('preview').src = data.url;
+          document.getElementById('preview').style.display = 'block';
+        }
+
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('result').innerHTML = `
+          <p style="color:red">❌ Error: ${error.message}</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
