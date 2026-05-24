@@ -7,48 +7,14 @@ dotenv.config();
 
 const app = express();
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-  next();
-});
+app.use(cors({ origin: '*' }));
 
-// Middleware
-app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL || 'http://localhost:5173',
-    'http://localhost:3000','https://real-estate-app-phi-lilac.vercel.app',
-    'null',
-    null
-  ],
-  origin: '*'
-}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Health check route
 app.get('/api', (req, res) => {
   res.json({ message: 'API is running', status: 'ok' });
-});
-
-// ✅ ADD THIS - Cloudinary test route
-app.get('/api/test-cloudinary', async (req, res) => {
-  const cloudinary = require('cloudinary').v2;
-  cloudinary.config({
-    cloud_name: 'dzgnkrxme',
-    api_key: '689741519664287',      // ← paste your key
-    api_secret: 'F1TGGKWXE2kYHfza3PU-6GQOGNk', // ← paste your secret
-  });
-  try {
-    const result = await cloudinary.api.ping();
-    res.json({ success: true, result });
-  } catch (error) {
-    res.json({ success: false, error: error.message });
-  }
 });
 
 // Routes
