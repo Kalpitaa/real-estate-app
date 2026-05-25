@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom'; // ✅ import these
+import { Link, useLocation } from 'react-router-dom';
 import { FaHome, FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); // ✅ track active route
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,7 +16,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ Updated with correct paths
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Properties', path: '/properties' },
@@ -24,13 +23,16 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const isHome = location.pathname === '/';
+  const solidNav = scrolled || !isHome;
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
+        solidNav
           ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
@@ -38,7 +40,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/">  {/* ✅ Logo navigates home */}
+          <Link to="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-2 cursor-pointer"
@@ -46,7 +48,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <FaHome className="text-white text-xl" />
               </div>
-              <span className="text-2xl font-bold text-white">
+              <span className={`text-2xl font-bold ${solidNav ? 'text-blue-600 dark:text-white' : 'text-white'}`}>
                 ChennaiRealty
               </span>
             </motion.div>
@@ -60,8 +62,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 to={link.path}
                 className={`font-medium transition-colors ${
                   location.pathname === link.path
-                    ? 'text-blue-600 dark:text-blue-400'  // ✅ active style
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? 'text-blue-600 dark:text-blue-400'
+                    : solidNav
+                      ? 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      : 'text-white hover:text-blue-300'
                 }`}
               >
                 {link.name}
@@ -94,9 +98,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+            className={`md:hidden p-2 rounded-lg ${solidNav ? 'bg-gray-200 dark:bg-gray-700' : 'bg-white/20'}`}
           >
-            {isOpen ? <FaTimes /> : <FaBars />}
+            {isOpen
+              ? <FaTimes className={solidNav ? 'text-gray-700 dark:text-white' : 'text-white'} />
+              : <FaBars className={solidNav ? 'text-gray-700 dark:text-white' : 'text-white'} />
+            }
           </button>
         </div>
 
