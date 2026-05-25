@@ -41,7 +41,9 @@ const PropertyCard = ({ property, index }) => {
         <div className="flex items-center text-gray-500 dark:text-gray-400 mb-3">
           <FaMapMarkerAlt className="text-blue-500 mr-2 text-sm" />
           <span className="text-sm">
-            {property.location?.city}, {property.location?.state}
+            {typeof property.location === 'string' 
+              ? property.location 
+              : `${property.location?.city}, ${property.location?.state}`}
           </span>
         </div>
 

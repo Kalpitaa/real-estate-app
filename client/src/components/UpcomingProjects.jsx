@@ -8,7 +8,7 @@ const upcomingProjects = [
     name: "Sunshine Towers",
     location: "OMR, Chennai",
     launchDate: "December 2025",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779704605/Casagrand-Casamia_vn20ly.jpg",
     type: "Luxury Apartments",
     units: "200+ Units"
   },
@@ -17,7 +17,7 @@ const upcomingProjects = [
     name: "Green Valley Estates",
     location: "ECR, Chennai",
     launchDate: "March 2026",
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779704444/WhatsApp-Image-2022-10-21-at-2.10.49-PM_qatwu0.jpg",
     type: "Premium Villas",
     units: "150+ Villas"
   },
@@ -26,7 +26,7 @@ const upcomingProjects = [
     name: "Metro Heights",
     location: "Velachery, Chennai",
     launchDate: "August 2025",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779704400/Brigade_Stellaris_1_ftrcyp.jpg",
     type: "Smart Homes",
     units: "300+ Apartments"
   },
@@ -35,7 +35,7 @@ const upcomingProjects = [
     name: "Riverside Residency",
     location: "Porur, Chennai",
     launchDate: "February 2026",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779704445/WhatsApp-Image-2023-03-17-at-11.33.32-1-1170x785_sfmhjz.webp",
     type: "Affordable Housing",
     units: "500+ Units"
   }

@@ -6,41 +6,49 @@ const properties = [
   {
     _id: 1,
     title: "Luxury Sea View Apartment",
-    price: "₹2.5 Cr",
-    location: "ECR, Chennai",
+    price: 25000000,
+    location: { city: "ECR", state: "Chennai" },
     bhk: "3 BHK",
-    area: "1850 sq ft",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80",
+    area: "1850",
+    bedrooms: 3,
+    bathrooms: 2,
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779702471/Orchid_Petals_Gurgaon___Luxury_Apartments_for_Rent_in_Sector_49_opvrty.jpg",
     features: ["Sea View", "Pool", "Gym"]
   },
   {
     _id: 2,
     title: "Modern Family Villa",
-    price: "₹4.2 Cr",
-    location: "Anna Nagar, Chennai",
+    price: 42000000,
+    location: { city: "Anna Nagar", state: "Chennai" },
     bhk: "4 BHK",
-    area: "3200 sq ft",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80",
+    area: "3200",
+    bedrooms: 4,
+    bathrooms: 3,
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779702451/Luxury_at_it_s_pick_cm56ob.jpg",
     features: ["Garden", "Parking", "Security"]
   },
   {
     _id: 3,
     title: "Tech Park Residency",
-    price: "₹1.8 Cr",
-    location: "OMR, Chennai",
+    price: 18000000,
+    location: { city: "OMR", state: "Chennai" },
     bhk: "3 BHK",
-    area: "1650 sq ft",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+    area: "1650",
+    bedrooms: 3,
+    bathrooms: 2,
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779702450/Low_Rise_Apartments_in_Greater_Noida___Peaceful_Spacious_Living_logsul.jpg",
     features: ["Smart Home", "Club House", "WiFi"]
   },
   {
     _id: 4,
     title: "Budget Friendly Apartment",
-    price: "₹65 Lakhs",
-    location: "Tambaram, Chennai",
+    price: 6500000,
+    location: { city: "Tambaram", state: "Chennai" },
     bhk: "2 BHK",
-    area: "1050 sq ft",
-    image: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&q=80",
+    area: "1050",
+    bedrooms: 2,
+    bathrooms: 1,
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779702427/Die_8_besten_Mehrfamilienhaus_Projekte_f%C3%BCr_Investoren_-_Grundiert_de_kyhmvs.jpg",
     features: ["Near Metro", "Park", "Market"]
   }
 ];
@@ -57,7 +65,8 @@ const FeaturedProperties = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-blue-600 bg-clip-text text-transparent">Properties</span>
+            Featured <span className="text-blue-600 
+            ">Properties</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Discover our handpicked selection of premium properties in Chennai's most sought-after locations
