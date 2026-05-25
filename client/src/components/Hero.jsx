@@ -46,15 +46,15 @@ const Hero = () => {
                 className="flex-1 px-6 py-3 bg-white/20 rounded-xl text-white placeholder-gray-300 border border-white/30 focus:outline-none focus:border-blue-500"
               />
               <select className="px-6 py-3 bg-white/20 rounded-xl text-white border border-white/30 focus:outline-none">
-                <option value="">Property Type</option>
-                <option value="apartment">Apartment</option>
-                <option value="villa">Villa</option>
-                <option value="penthouse">Penthouse</option>
+                <option value="" className="bg-gray-700 text-white">Property Type</option>
+                <option value="apartment"className="bg-gray-700 text-white">Apartment</option>
+                <option value="villa" className="bg-gray-700 text-white">Villa</option>
+                <option value="penthouse" className="bg-gray-700 text-white">Penthouse</option>
               </select>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-blue-600 rounded-xl font-semibold flex items-center justify-center gap-2"
+                className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2"
               >
                 <FaSearch />
                 Search
