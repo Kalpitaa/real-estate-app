@@ -37,7 +37,7 @@ const properties = [
     area: "1650",
     bedrooms: 3,
     bathrooms: 2,
-    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779702450/Low_Rise_Apartments_in_Greater_Noida___Peaceful_Spacious_Living_logsul.jpg",
+    image: "https://res.cloudinary.com/dzgnkrxme/image/upload/v1779717626/Die_8_besten_Mehrfamilienhaus_Projekte_f%C3%BCr_Investoren_-_Grundiert_de_pe7aml.jpg",
     features: ["Smart Home", "Club House", "WiFi"]
   },
   {
