@@ -183,7 +183,7 @@ const PropertyDetails = () => {
                 </div>
               </div>
               
-              <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+              <div className="text-3xl font-bold bg-blue-600 bg-clip-text text-transparent mb-6">
                 {property.price}
               </div>
 
@@ -263,7 +263,7 @@ const PropertyDetails = () => {
                   
                   <button 
                     onClick={() => setShowEnquiry(true)}
-                    className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2"
+                    className="w-full py-3 bg-blue-600 text-white rounded-xl font-semibold flex items-center justify-center gap-2"
                   >
                     <FaPaperPlane />
                     Enquire Now
@@ -350,7 +350,7 @@ const PropertyDetails = () => {
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="flex-1 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold disabled:opacity-50"
+                          className="flex-1 py-2 bg-blue-600 text-white rounded-lg font-semibold disabled:opacity-50"
                         >
                           {isSubmitting ? 'Sending...' : 'Submit Enquiry'}
                         </button>

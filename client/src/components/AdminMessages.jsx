@@ -156,7 +156,7 @@ const AdminMessages = () => {
             
             <button
               onClick={() => setSelectedMessage(null)}
-              className="mt-6 w-full py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg"
+              className="mt-6 w-full py-2 bg-blue-600 text-white rounded-lg"
             >
               Close
             </button>

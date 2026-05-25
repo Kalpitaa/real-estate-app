@@ -26,7 +26,7 @@ const PropertyCard = ({ property, index }) => {
         <button className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur-sm rounded-full hover:bg-red-500 hover:text-white transition-colors">
           <FaHeart />
         </button>
-        <div className="absolute bottom-4 left-4 px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white text-sm font-semibold">
+        <div className="absolute bottom-4 left-4 px-3 py-1 bg-blue-600 rounded-full text-white text-sm font-semibold">
           {property.bhk || property.type}
         </div>
       </div>
@@ -67,14 +67,14 @@ const PropertyCard = ({ property, index }) => {
         <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-700">
           <div>
             <span className="text-gray-500 dark:text-gray-400 text-xs">Starting from</span>
-            <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <p className="text-2xl font-bold bg-blue-600 bg-clip-text text-transparent">
               ₹{property.price?.toLocaleString('en-IN')}
             </p>
           </div>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg transition-all flex items-center gap-2"
+            className="px-4 py-2 bg-blue-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg transition-all flex items-center gap-2"
           >
             View Details
             <FaArrowRight size={12} />

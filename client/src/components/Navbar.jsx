@@ -43,10 +43,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-2 cursor-pointer"
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <FaHome className="text-white text-xl" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-white">
                 ChennaiRealty
               </span>
             </motion.div>
@@ -84,7 +84,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all"
+                className="px-6 py-2 bg-blue-600 text-white rounded-full font-semibold hover:shadow-lg transition-all"
               >
                 Get Started
               </motion.button>
@@ -131,7 +131,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 {darkMode ? 'Light Mode' : 'Dark Mode'}
               </button>
               <Link to="/contact" onClick={() => setIsOpen(false)}>
-                <button className="w-full py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold">
+                <button className="w-full py-2 bg-blue-600 text-white rounded-full font-semibold">
                   Get Started
                 </button>
               </Link>

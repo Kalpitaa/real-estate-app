@@ -53,7 +53,7 @@ const UpcomingProjects = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Upcoming <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+            Upcoming <span className="bg-blue-600 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Be the first to own these upcoming premium properties in Chennai
@@ -111,7 +111,7 @@ const UpcomingProjects = () => {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full py-2 mt-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg transition-all"
+                  className="w-full py-2 mt-2 bg-blue-600 text-white rounded-xl font-semibold text-sm hover:shadow-lg transition-all"
                 >
                   Register Interest
                 </motion.button>

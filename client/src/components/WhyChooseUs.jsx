@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Us</span>
+            Why Choose <span className="bg-blue-600 bg-clip-text text-transparent">Us</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             We provide exceptional service and expertise to help you find your perfect property
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
               whileHover={{ y: -10 }}
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all"
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white">
+              <div className="w-20 h-20 mx-auto mb-6 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">

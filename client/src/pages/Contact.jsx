@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <div className="pt-20 pb-12">
       {/* Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+      <section className="bg-blue-600 py-16">
         <div className="container mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -114,7 +114,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold"
+                className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold"
               >
                 Send Message
               </motion.button>

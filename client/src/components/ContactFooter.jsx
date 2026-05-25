@@ -57,7 +57,7 @@ const ContactFooter = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="bg-blue-600 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
@@ -116,7 +116,7 @@ const ContactFooter = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-50"
+                className="w-full py-3 bg-blue-600 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all disabled:opacity-50"
               >
                 <FaPaperPlane />
                 {loading ? 'Sending...' : 'Send Message'}
@@ -182,7 +182,7 @@ const ContactFooter = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <FaEnvelope className="text-white text-sm" />
               </div>
               <span className="font-bold text-lg">ChennaiRealty</span>

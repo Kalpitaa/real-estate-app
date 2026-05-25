@@ -57,7 +57,7 @@ const FeaturedProperties = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Properties</span>
+            Featured <span className="bg-blue-600 bg-clip-text text-transparent">Properties</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Discover our handpicked selection of premium properties in Chennai's most sought-after locations

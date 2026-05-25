@@ -73,7 +73,7 @@ const About = () => {
                 alt="Our Office"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-2xl">
+              <div className="absolute -bottom-6 -right-6 bg-blue-600 p-4 rounded-2xl">
                 <div className="text-white text-center">
                   <div className="text-3xl font-bold">10+</div>
                   <div className="text-sm">Years of Excellence</div>
@@ -95,7 +95,7 @@ const About = () => {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Values</span>
+              Our <span className="bg-blue-600 bg-clip-text text-transparent">Values</span>
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -113,7 +113,7 @@ const About = () => {
                 viewport={{ once: true }}
                 className="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg"
               >
-                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white">
+                <div className="w-20 h-20 mx-auto mb-4 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>

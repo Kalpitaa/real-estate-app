@@ -125,7 +125,7 @@ const Register = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold"
+                className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold"
               >
                 Register Now
               </motion.button>

@@ -53,7 +53,7 @@ const UpcomingProjects = () => {
   return (
     <div className="pt-20 pb-12 bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 mb-12">
+      <section className="bg-blue-600 py-16 mb-12">
         <div className="container mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -125,7 +125,7 @@ const UpcomingProjects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold"
+                    className="px-6 py-2 bg-blue-600 text-white rounded-xl font-semibold"
                   >
                     Register Interest
                   </motion.button>

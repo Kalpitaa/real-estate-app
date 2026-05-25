@@ -36,7 +36,7 @@ const StatsCounter = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+    <section className="py-20 bg-blue-600">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

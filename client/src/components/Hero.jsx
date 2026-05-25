@@ -54,7 +54,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl font-semibold flex items-center justify-center gap-2"
+                className="px-8 py-3 bg-blue-600 rounded-xl font-semibold flex items-center justify-center gap-2"
               >
                 <FaSearch />
                 Search

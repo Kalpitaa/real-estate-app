@@ -42,7 +42,7 @@ const AdminDashboard = () => {
                   onClick={() => setActiveTab(item.id)}
                   className={`w-full flex items-center gap-3 px-4 py-2 rounded-xl transition-all ${
                     activeTab === item.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                      ? 'bg-blue-600 text-white'
                       : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
                   }`}
                 >
@@ -129,7 +129,7 @@ const AdminDashboard = () => {
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-bold">Properties Management</h2>
-                  <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg">
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">
                     + Add Property
                   </button>
                 </div>
@@ -171,7 +171,7 @@ const AdminDashboard = () => {
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-bold">Projects Management</h2>
-                  <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg">
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">
                     + Add Project
                   </button>
                 </div>
@@ -184,7 +184,7 @@ const AdminDashboard = () => {
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-bold">Users Management</h2>
-                  <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg">
+                  <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">
                     + Add User
                   </button>
                 </div>
@@ -216,7 +216,7 @@ const AdminDashboard = () => {
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700"
                     />
                   </div>
-                  <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg">
+                  <button className="px-6 py-2 bg-blue-600 text-white rounded-lg">
                     Save Settings
                   </button>
                 </div>

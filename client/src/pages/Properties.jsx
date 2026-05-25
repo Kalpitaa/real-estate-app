@@ -78,7 +78,7 @@ const Properties = () => {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+      <section className="bg-blue-600 py-16">
         <div className="container mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -109,7 +109,7 @@ const Properties = () => {
                   onClick={() => setFilter(type === 'all' ? 'all' : type)}
                   className={`px-4 py-2 rounded-full transition-all ${
                     filter === type 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                      ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200'
                   }`}
                 >
