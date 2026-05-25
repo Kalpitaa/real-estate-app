@@ -18,13 +18,13 @@ const ContactFooter = () => {
     setLoading(true);
     setError('');
     
-    console.log('📤 Submitting form data:', formData);
+    console.log('Submitting form data:', formData);
     
     try {
       // Send to backend
       const response = await api.post('/contact', formData);
       
-      console.log('📥 Backend response:', response.data);
+      console.log('Backend response:', response.data);
       
       if (response.data.success) {
         setSubmitted(true);
@@ -34,7 +34,7 @@ const ContactFooter = () => {
         setError(response.data.message || 'Failed to send message');
       }
     } catch (err) {
-      console.error('❌ Error details:', err);
+      console.error('Error details:', err);
       console.error('Response:', err.response?.data);
       setError(err.response?.data?.message || 'Failed to send message. Please try again.');
     } finally {
@@ -177,22 +177,74 @@ const ContactFooter = () => {
         </div>
       </div>
 
+      {/* Footer Links Section */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Brand Column */}
+            <div>
+              <h3 className="text-2xl font-bold mb-4">ARKHE</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Building extraordinary spaces since 2008. Where vision meets craft and dreams become landmarks.
+              </p>
+            </div>
+
+            {/* Company Column */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">COMPANY</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">About Us</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Our Team</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Careers</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Sustainability</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Press</a></li>
+              </ul>
+            </div>
+
+            {/* Services Column */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">SERVICES</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Residential</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Commercial</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Interior Design</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Smart Homes</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-sm">Renovation</a></li>
+              </ul>
+            </div>
+
+            {/* Newsletter Column */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">NEWSLETTER</h4>
+              <p className="text-gray-400 text-sm mb-4">
+                Subscribe for architecture insights and project announcements.
+              </p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-500 text-sm"
+                />
+                <button className="px-4 py-2 bg-blue-600 rounded-r-lg hover:bg-blue-700 transition-colors">
+                  <FaPaperPlane className="text-white text-sm" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Footer Bottom */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <FaEnvelope className="text-white text-sm" />
-              </div>
-              <span className="font-bold text-lg">ChennaiRealty</span>
+            <div className="text-gray-500 text-sm text-center md:text-left">
+              © 2026 ARKHE Construction & Architecture. All rights reserved.
             </div>
-            <div className="text-gray-400 text-sm text-center">
-              © 2024 ChennaiRealty. All rights reserved.
-            </div>
-            <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <div className="flex gap-6 text-sm">
+              <a href="#" className="text-gray-500 hover:text-blue-500 transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-500 hover:text-blue-500 transition-colors">Terms</a>
+              <a href="#" className="text-gray-500 hover:text-blue-500 transition-colors">Sitemap</a>
             </div>
           </div>
         </div>

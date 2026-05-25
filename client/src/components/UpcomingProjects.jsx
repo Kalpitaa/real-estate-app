@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaCheckCircle, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import VoicesCarousel from './VoicesCarousel';
 
 const upcomingProjects = [
   {
@@ -69,12 +70,7 @@ const UpcomingProjects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="glassmorphism rounded-2xl overflow-hidden cursor-pointer group"
-              style={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
-              }}
+              className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <div className="relative overflow-hidden h-48">
                 <img
@@ -103,7 +99,6 @@ const UpcomingProjects = () => {
                     <span className="text-xs">{project.launchDate}</span>
                   </div>
                   <div className="flex items-center text-gray-600 dark:text-gray-400">
-                    <FaClock className="text-blue-500 mr-1 text-sm" />
                     <span className="text-xs">{project.units}</span>
                   </div>
                 </div>
@@ -120,32 +115,10 @@ const UpcomingProjects = () => {
           ))}
         </div>
 
-        {/* Timeline Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <div className="glassmorphism rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
-              Why Invest in Chennai's Real Estate?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-3xl mx-auto">
-              Chennai is one of India's fastest-growing real estate markets with excellent connectivity, 
-              IT hubs, and world-class infrastructure. Invest now for the best returns!
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {['IT Corridor Growth', 'Excellent Connectivity', 'High ROI', 'Premium Lifestyle'].map((item) => (
-                <div key={item} className="flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 rounded-full">
-                  <FaCheckCircle className="text-blue-500 text-sm" />
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
+        {/* Voices Carousel Section */}
+        <div className="mt-20">
+          <VoicesCarousel />
+        </div>
       </div>
     </section>
   );

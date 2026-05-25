@@ -1,44 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaHandshake, FaChartLine, FaClock, FaUsers, FaAward } from 'react-icons/fa';
+import { FaTrophy, FaBuilding, FaUsers, FaClock, FaLeaf, FaMicrochip, FaHandshake, FaChartLine } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
-  const features = [
+  const stats = [
     {
-      icon: <FaShieldAlt className="text-4xl" />,
-      title: 'Secure Transactions',
-      description: '100% legal verification and secure payment gateways'
+      icon: <FaTrophy className="text-3xl" />,
+      value: "15+",
+      label: "Years of Excellence",
+      sublabel: "Over landmark projects"
     },
     {
-      icon: <FaHandshake className="text-4xl" />,
-      title: 'Trusted Partners',
-      description: 'Working with Chennai\'s top builders and developers'
+      icon: <FaBuilding className="text-3xl" />,
+      value: "250+",
+      label: "Projects Delivered",
+      sublabel: "Relentless perfection"
     },
     {
-      icon: <FaChartLine className="text-4xl" />,
-      title: 'Best ROI',
-      description: 'High return on investment guaranteed properties'
+      icon: <FaUsers className="text-3xl" />,
+      value: "100%",
+      label: "Certified Engineers",
+      sublabel: "Specialized expertise"
     },
     {
-      icon: <FaClock className="text-4xl" />,
-      title: '24/7 Support',
-      description: 'Round-the-clock customer support for all queries'
+      icon: <FaClock className="text-3xl" />,
+      value: "98%",
+      label: "On-Time Completion",
+      sublabel: "Project discipline"
     },
     {
-      icon: <FaUsers className="text-4xl" />,
-      title: 'Expert Team',
-      description: 'Professional real estate advisors with local expertise'
+      icon: <FaLeaf className="text-3xl" />,
+      value: "A+",
+      label: "Sustainable Material",
+      sublabel: "Finest quality sourced"
     },
     {
-      icon: <FaAward className="text-4xl" />,
-      title: 'Award Winning',
-      description: 'Recognized as Chennai\'s best real estate agency'
+      icon: <FaMicrochip className="text-3xl" />,
+      value: "Expert",
+      label: "Team & Technology",
+      sublabel: "Modern approach"
     }
   ];
 
+  const trustFeatures = [
+    "Expert Team",
+    "Modern Technology",
+    "Client First Approach"
+  ];
+
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,37 +59,86 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="bg-blue-600 bg-clip-text text-transparent">Us</span>
+          <p className="text-blue-600 font-semibold mb-2 tracking-wide">WHY CHOOSE US</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Build On Trust <span className="text-blue-600">Driven By Excellence</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            We provide exceptional service and expertise to help you find your perfect property
-          </p>
+          
+          {/* Trust Features Row */}
+          <div className="flex flex-wrap justify-center gap-6 mt-6">
+            {trustFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1, duration: 0.4 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2"
+              >
+                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">{feature}</span>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        {/* Stats Grid - 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all"
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 text-center hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-blue-600 rounded-2xl flex items-center justify-center text-white">
-                {feature.icon}
+              {/* Icon */}
+              <div className="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                {stat.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">
-                {feature.title}
+              
+              {/* Value */}
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ delay: index * 0.1 + 0.2, type: "spring", stiffness: 100 }}
+                viewport={{ once: true }}
+                className="text-4xl md:text-5xl font-bold text-blue-600 mb-2"
+              >
+                {stat.value}
+              </motion.div>
+              
+              {/* Label */}
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-1">
+                {stat.label}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                {feature.description}
+              
+              {/* Sublabel */}
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {stat.sublabel}
               </p>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          {/* <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
+          >
+            View More →
+          </motion.button> */}
+        </motion.div>
       </div>
     </section>
   );

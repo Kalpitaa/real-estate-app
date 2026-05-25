@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import ContactFooter from './components/ContactFooter';
@@ -13,7 +13,25 @@ import AdminDashboard from './pages/AdminDashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ScrollToTop from './components/ScrollToTop';
-//import BackendTest from './components/BackendTest';
+
+// Page transition wrapper component
+const PageTransition = ({ children }) => {
+  const location = useLocation();
+  
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.3 }}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+};
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -32,11 +50,11 @@ function App() {
 
   return (
     <Router>
-      <div className={`${darkMode ? 'dark' : ''}`}>
+      <div className={darkMode ? 'dark' : ''}>
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <ScrollToTop />
-          <AnimatePresence mode="wait">
+          <PageTransition>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -48,9 +66,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
             </Routes>
-          </AnimatePresence>
+          </PageTransition>
           <ContactFooter />
-          {/* <BackendTest /> */}
         </div>
       </div>
     </Router>
