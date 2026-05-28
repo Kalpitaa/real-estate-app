@@ -47,7 +47,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-50 dark:bg-gray-900">
+    <section className="relative min-h-[70vh] md:min-h-screen flex items-center overflow-hidden bg-gray-50 dark:bg-gray-900">
 
       {/* Background subtle pattern */}
       <div className="absolute inset-0 z-0 opacity-5">
@@ -56,7 +56,8 @@ const Hero = () => {
       </div>
 
       {/* Added small pt-20 for subtle spacing from navbar */}
-      <div className="container mx-auto px-6 md:px-12 relative z-10 py-24 md:pt-20 md:pb-24">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 pt-28 pb-12 md:pt-20 md:pb-24">
+      {/* //<div className="container mx-auto px-6 md:px-12 relative z-10 py-24 md:pt-20 md:pb-24"> */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
           {/* Left Content */}
@@ -85,10 +86,10 @@ const Hero = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
               >
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-2">
                   {slides[currentSlide].title}
                 </h1>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue-600 leading-tight mb-6">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-blue-600 leading-tight mb-6">
                   {slides[currentSlide].subtitle}
                 </h1>
               </motion.div>
