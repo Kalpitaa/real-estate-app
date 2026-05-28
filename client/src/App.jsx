@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import ContactFooter from './components/ContactFooter';
 import Home from './pages/Home';
-import About from './pages/About';
+import StorySection from './components/StorySection';
 import Properties from './pages/Properties';
 import PropertyDetails from './pages/PropertyDetails';
 import UpcomingProjects from './pages/UpcomingProjects';
@@ -57,7 +57,7 @@ function App() {
           <PageTransition>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/StorySection" element={<StorySection />} />
               <Route path="/properties" element={<Properties />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
               <Route path="/upcoming-projects" element={<UpcomingProjects />} />
